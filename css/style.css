@@ -269,7 +269,6 @@ input {
   margin-top: 5px;
 }
 
-
 input:hover {
   opacity: 1;
 }
@@ -285,6 +284,7 @@ input:hover {
   font-weight: bold;
   font-size: 20px;
   justify-content: space-between;
+  opacity: 1;
 }
 
 /*--------------book--------*/
@@ -687,6 +687,9 @@ footer {
   .wrapper .text {
     padding: 10px;
     height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .heading_top {
@@ -699,5 +702,59 @@ footer {
 
   .restaurant .flex {
     flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width:393px) {
+  .home {
+    margin: 20% 0 0 0;
+    width: 100vw;
+  }
+
+  .home h1 {
+    margin: 0 20px;
+  }
+
+  .home p {
+    margin: 10px 20px 0px 20px;
+  }
+
+  .home button {
+    margin: 20px 90px 0px 90px;
+
+  }
+
+  .hambuger {
+    margin-right: 20px;
+  }
+
+  .payments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+  footer>img {
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 }
