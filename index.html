@@ -33,7 +33,6 @@
           <li> <a href="#home" class="nav-link">Home</a> </li>
           <li> <a href="#about" class="nav-link">About</a> </li>
           <li> <a href="#rooms" class="nav-link">Rooms</a> </li>
-          <li> <a href="#restaurant" class="nav-link">Restaurant</a> </li>
           <li> <a href="#gallery" class="nav-link">Gallery</a> </li>
           <li> <a href="#footer" class="nav-link">Contact</a> </li>
         </ul>
@@ -103,36 +102,36 @@
   </script>
   <section class="book">
     <div class="container flex">
-      <div class="input grid">
+      <form action="https://formsubmit.co/reservationkr123@gmail.com" method="POST" class="input grid">
         <div class="box">
           <label>Check-in:</label>
-          <input type="date" placeholder="Check-in-Date">
+          <input type="date" name="Check-In" placeholder="Check-in-Date" required>
         </div>
         <div class="box">
           <label>Check-out:</label>
-          <input type="date" placeholder="Check-out-Date">
+          <input type="date" name="Check-Out" placeholder="Check-out-Date" required>
         </div>
         <div class="box">
           <label>Adults:</label> <br>
-          <input type="number" placeholder="0">
+          <input type="number" name="Adults" placeholder="0" required>
         </div>
         <div class="box">
           <label>Children:</label> <br>
-          <input type="number" placeholder="0">
+          <input type="number" name="Children" placeholder="0" required>
         </div>
         <div class="box">
           <label>Your Name:</label> <br>
-          <input type="text" placeholder="Ashok Kumar">
+          <input type="text" name="Name" placeholder="Ashok Kumar" required>
         </div>
         <div class="box">
           <label>Your Email:</label> <br>
-          <input type="email" placeholder="yourmail@gmail.om">
+          <input type="email" name="Email" placeholder="yourmail@gmail.om" required>
         </div>
-      </div>
+      </form>
 
-      <div class="search">
+      <form method="post" class="search">
         <input type="submit" value="ENQUIRE">
-      </div>
+      </form>
     </div>
   </section>
   <section class="about top" id="about">
@@ -385,6 +384,7 @@
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>
