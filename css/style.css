@@ -370,7 +370,7 @@ section {
 /* review */
 
 .review {
-    background-image: url("./images/review.jpg");
+    background-image: url("/images/review.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
