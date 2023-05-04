@@ -32,7 +32,7 @@ var swiper = new Swiper(".gallery-slider", {
     loop: true,
     centeredSlides: true,
     autoplay: {
-        delay: 1500,
+        delay: 7500,
         disableOnInteraction: false,
     },
     pagination: {
@@ -58,7 +58,7 @@ var swiper = new Swiper(".review-slider", {
     loop: true,
     centeredSlides: true,
     autoplay: {
-        delay: 700500,
+        delay: 7500,
         disableOnInteraction: false,
     },
     pagination: {
