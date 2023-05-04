@@ -1,383 +1,645 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <title>Welcome to Hotel Kashmir Royale Resort</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
-    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hotel Website</title>
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- swiper js cdn link -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <!-- custom css link -->
+   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header class="header" id="navigation-menu">
-    <div class="container">
-      <nav>
-        <a href="#" class="logo"> <img src="image/my-hotel-logo.png" alt=""> </a>
 
-        <ul class="nav-menu">
-          <li> <a href="#home" class="nav-link">Home</a> </li>
-          <li> <a href="#about" class="nav-link">About</a> </li>
-          <li> <a href="#rooms" class="nav-link">Rooms</a> </li>
-          <li> <a href="#gallery" class="nav-link">Gallery</a> </li>
-          <li> <a href="#footer" class="nav-link">Contact</a> </li>
-        </ul>
+   <!-- header -->
 
-        <div class="hambuger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
+   <header class="header">
+
+      <a href="#" class="logo"> <img src="./images/my-hotel-logo.png" alt=""></a>
+
+      <nav class="navbar">
+         <a href="#home">home</a>
+         <a href="#about">about</a>
+         <a href="#room">room</a>
+         <a href="#gallery">gallery</a>
+         <a href="#review">review</a>
+         <a href="#faq">faq</a>
+         <a href="#reservation" class="btn"> book now</a>
       </nav>
-    </div>
-  </header>
-  <script>
-    const hambuger = document.querySelector('.hambuger');
-    const navMenu = document.querySelector('.nav-menu');
 
-    hambuger.addEventListener("click", mobileMenu);
+      <div id="menu-btn" class="fas fa-bars"></div>
 
-    function mobileMenu() {
-      hambuger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    }
+   </header>
 
-    const navLink = document.querySelectorAll('.nav-link');
-    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+   <!-- end -->
 
-    function closeMenu() {
-      hambuger.classList.remove("active");
-      navMenu.classList.remove("active");
-    }
-  </script>
+   <!-- home -->
 
-  <section class="home" id="home">
-    <div class="head_container">
-      <div class="box">
-        <div class="text">
-          <h1>Hotel Kashmir Royale Resort</h1>
-          <p>
-            <strong>Hotel Kashmir Royale Resort</strong> is one of the finest deluxe accomdation located at Srinagar
-            Kashmir
-            India. It is
-            only few meters away from the breathtaking world famous Dal Lake at Srinagar Kashmir. Hotel Kashmir Royale
-            Resort offers elegant accommodation
-            in tastefully designed rooms.
-          </p>
-          <button>MORE INFO</button>
-        </div>
+   <section class="home" id="home">
+
+      <div class="swiper home-slider">
+
+         <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide"
+               style="background: url(images/home-slide1.jpg) no-repeat; filter: brightness(90%);">
+               <div class="content">
+                  <h3 style="text-shadow: rgb(0, 0, 0) 1px 0 10px;">One step closer to Paradise.</h3>
+               </div>
+            </div>
+
+            <div class="swiper-slide slide" style="background: url(images/home-slide2.jpg) no-repeat;">
+               <div class="content">
+                  <h3 style="text-shadow: rgb(0, 0, 0) 1px 0 10px;">Stay once, carry memories forever.</h3>
+               </div>
+            </div>
+
+            <div class="swiper-slide slide" style="background: url(images/home-slide3.jpg) no-repeat;">
+               <div class="content">
+                  <h3 style="text-shadow: rgb(0, 0, 0) 1px 0 10px;">Space to live your life.</h3>
+               </div>
+            </div>
+
+            <div class="swiper-slide slide" style="background: url(images/home-slide4.jpg) no-repeat;">
+               <div class="content">
+                  <h3 style="text-shadow: rgb(0, 0, 0) 1px 0 10px;">it's where dreams come true</h3>
+               </div>
+            </div>
+
+         </div>
+
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+
       </div>
-      <div class="image">
-        <img src="image/home1.jpeg" class="slide">
-      </div>
-      <div class="image_item">
-        <img src="image/home1.jpeg" alt="" class="slide active" onclick="img('image/home1.jpeg')">
-        <img src="image/home2.jpeg" alt="" class="slide" onclick="img('image/home2.jpeg')">
-        <img src="image/home3.jpeg" alt="" class="slide" onclick="img('image/home3.jpeg')">
-        <img src="image/home4.jpeg" alt="" class="slide" onclick="img('image/home4.jpeg')">
-      </div>
-    </div>
-  </section>
-  <script>
-    function img(anything) {
-      document.querySelector('.slide').src = anything;
-    }
 
-    function change(change) {
-      const line = document.querySelector('.image');
-      line.style.background = change;
-    }
-  </script>
-  <section class="book">
-    <div class="container flex">
-      <form action="https://formsubmit.co/reservationkr123@gmail.com" method="POST" class="input grid">
-        <div class="box">
-          <label>Check-in:</label>
-          <input type="date" name="Check-In" placeholder="Check-in-Date" required>
-        </div>
-        <div class="box">
-          <label>Check-out:</label>
-          <input type="date" name="Check-Out" placeholder="Check-out-Date" required>
-        </div>
-        <div class="box">
-          <label>Adults:</label> <br>
-          <input type="number" name="Adults" placeholder="0" required>
-        </div>
-        <div class="box">
-          <label>Children:</label> <br>
-          <input type="number" name="Children" placeholder="0" required>
-        </div>
-        <div class="box">
-          <label>Your Name:</label> <br>
-          <input type="text" name="Name" placeholder="Ashok Kumar" required>
-        </div>
-        <div class="box">
-          <label>Your Email:</label> <br>
-          <input type="email" name="Email" placeholder="yourmail@gmail.om" required>
-        </div>
-        <button class="search" type="submit">Enquire</button>
+   </section>
+
+   <!-- end -->
+
+   <!-- availability -->
+
+   <section class="availability">
+
+      <form action="https://formsubmit.co/reservationkr123@gmail.com" method="POST">
+
+         <div class="box">
+            <p>check in <span>*</span></p>
+            <input type="date" class="input">
+         </div>
+
+         <div class="box">
+            <p>check out <span>*</span></p>
+            <input type="date" class="input">
+         </div>
+
+         <div class="box">
+            <p>adults <span>*</span></p>
+            <select name="adults" id="" class="input">
+               <option value="1">1 adults</option>
+               <option value="2">2 adults</option>
+               <option value="3">3 adults</option>
+               <option value="4">4 adults</option>
+               <option value="5">5 adults</option>
+               <option value="6">6 adults</option>
+            </select>
+         </div>
+
+         <div class="box">
+            <p>children <span>*</span></p>
+            <select name="child" id="" class="input">
+               <option value="1">1 child</option>
+               <option value="2">2 child</option>
+               <option value="3">3 child</option>
+               <option value="4">4 child</option>
+               <option value="5">5 child</option>
+               <option value="6">6 child</option>
+            </select>
+         </div>
+
+         <div class="box">
+            <p>rooms <span>*</span></p>
+            <select name="rooms" id="" class="input">
+               <option value="1">1 rooms</option>
+               <option value="2">2 rooms</option>
+               <option value="3">3 rooms</option>
+               <option value="4">4 rooms</option>
+               <option value="5">5 rooms</option>
+               <option value="6">6 rooms</option>
+            </select>
+         </div>
+
+         <input type="submit" value="check availability" class="btn">
+
       </form>
 
-      <!-- <form method="post" class="search">
-        <input type="submit" value="ENQUIRE">
-      </form> -->
-    </div>
-  </section>
-  <section class="about top" id="about">
-    <div class="container flex">
-      <div class="left">
-        <div class="img">
-          <img src="image/a1.jpeg" alt="" class="image1">
-          <img src="image/a2.jpeg" alt="" class="image2">
-        </div>
-      </div>
-      <div class="right">
-        <div class="heading">
-          <h5>Why You Should Choose Us</h5>
-          <h2>Welcome to Hotel Kashmir Royale Resort</h2>
-          <p>Tourist hotspots like the Famous Mughal Gardens, the Shankaracharya Temple, Pari Mahal and Hari Prabhat are
-            nearby attractions. You can get anything from casual meals to special dinners . Enjoy our artist chef menus
-            with rich diversity of taste and seasonal flavors. All major travel guides of India recommend Hotel Kashmir
-            Royale Resort Srinagar as it is World for our charming chalet-style rooms, hospitality and affordability.
-            You can dine in stillness and comfort of our private restaurant and dining rooms and, which are available to
-            all of our guests at Royale Resort. </p>
-          <p>Visit Soon. International supreme hospitality awaits you at Hotel Kashmir Royale Resort.</p>
-          <button class="btn1">READ MORE</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="wrapper top">
-    <div class="container">
-      <div class="text">
-        <h2>Our Amenities</h2>
-        <p>Relax and unwind with our wide array of top-class facilities, that cater to all our business and leisure
-          guests, whether it be after a long day’s meeting, a day of sightseeing and shopping or an event.</p>
+   </section>
 
-        <div class="content">
-          <div class="box flex">
+   <!-- end -->
+
+
+   <!-- about -->
+
+   <section class="about" id="about">
+
+      <div class="row">
+
+         <div class="image">
+            <img src="images/about.jpg" alt="">
+         </div>
+
+         <div class="content">
+            <h3>about us</h3>
+            <p>Hotel Kashmir Royale Resort is one of the finest deluxe accomdation located in Srinagar, Kashmir, India.
+               It
+               is only few meters away from the breathtaking world famous Dal Lake in Srinagar Kashmir. Hotel Kashmir
+               Royale Resort offers elegant accommodation in tastefully designed rooms.</p>
+            <h3>why choose us</h3>
+            <p>Tourist hotspots like the Famous Mughal Gardens, the Shankaracharya Temple, Pari Mahal, and Hari Prabhat
+               are nearby attractions. You can get anything from casual meals to special dinners. Enjoy our artist chef
+               menus with a rich diversity of tastes and seasonal flavors. All major travel guides of India recommend
+               Hotel Kashmir Royale Resort Srinagar as it is World for our charming chalet-style rooms, hospitality, and
+               affordability. You can dine in the stillness and comfort of our private restaurant and dining rooms,
+               which are available to all of our guests at Royale Resort. Visit Soon. International supreme hospitality
+               awaits you at Hotel Kashmir Royale Resort.</p>
+         </div>
+
+      </div>
+
+   </section>
+
+   <!-- end -->
+
+   <!-- room -->
+   <section class="room top" id="rooms">
+      <div class="container">
+         <div class="heading_top flex1">
+            <h1 class="heading">Our Rooms</h1>
+         </div>
+
+         <div class="content grid">
+            <div class="box">
+               <div class="img">
+                  <img src="/images/room-1.jpg" alt="">
+               </div>
+               <div class="text">
+                  <h3>Standard Single Rooms</h3>
+                  <p> <span>₹</span>3000 <span>/per night</span> </p>
+               </div>
+            </div>
+            <div class="box">
+               <div class="img">
+                  <img src="/images/room-2.jpg" alt="">
+               </div>
+               <div class="text">
+                  <h3>Deluxe Double Rooms</h3>
+                  <p> <span>₹</span>4000 <span>/per night</span> </p>
+               </div>
+            </div>
+            <div class="box">
+               <div class="img">
+                  <img src="/images/room-3.jpg" alt="">
+               </div>
+               <div class="text">
+                  <h3>Superior Family Rooms</h3>
+                  <p> <span>₹</span>5000 <span>/per night</span> </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- end -->
+
+   <!-- services -->
+
+   <section class="services">
+      <h1 class="heading">our Services</h1>
+      <div class="box-container">
+
+
+         <div class="box">
             <i class="fas fa-shower"></i>
-            <span>Hot And Cold Water</span>
-          </div>
-          <div class="box flex">
+            <h3>Hot and Cold Water</h3>
+         </div>
+
+         <div class="box">
             <i class="fas fa-tv"></i>
-            <span>LCD and CTV in rooms</span>
-          </div>
-          <div class="box flex">
-            <i class="fa-solid fa-person-walking-luggage"></i>
-            <span>Tour and Travel Desk</span>
-          </div>
-          <div class="box flex">
+            <h3>lcd and ctv</h3>
+         </div>
+
+         <div class="box">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <h3>tours and travel desk</h3>
+         </div>
+
+         <div class="box">
             <i class="fa-solid fa-panorama"></i>
-            <span>Sightseeing</span>
-          </div>
-          <div class="box flex">
+            <h3>sightseeing</h3>
+         </div>
+
+         <div class="box">
             <i class="fas fa-car"></i>
-            <span>Car Rental</span>
-          </div>
-          <div class="box flex">
+            <h3>car rental</h3>
+         </div>
+
+         <div class="box">
             <i class="fas fa-user-doctor"></i>
-            <span>Doctor On Call</span>
-          </div>
-          <div class="box flex">
+            <h3>doctor on call</h3>
+         </div>
+
+         <div class="box">
             <i class="fa-solid fa-jug-detergent"></i>
-            <span>Laundry Service</span>
-          </div>
-          <div class="box flex">
+            <h3>laundry</h3>
+         </div>
+
+         <div class="box">
             <i class="fa-solid fa-utensils"></i>
-            <span>Restaurant</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="room top" id="rooms">
-    <div class="container">
-      <div class="heading_top flex1">
-        <div class="heading">
-          <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
-          <h2>Rooms $ Suites</h2>
-        </div>
-        <div class="button">
-          <button class="btn1">VIEW ALL</button>
-        </div>
+            <h3>dine in</h3>
+         </div>
+
       </div>
 
-      <div class="content grid">
-        <div class="box">
-          <div class="img">
-            <img src="image/r1.jpeg" alt="">
-          </div>
-          <div class="text">
-            <h3>Standard Rooms</h3>
-            <p> <span>₹</span>3000 <span>/per night</span> </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img">
-            <img src="image/r2.jpeg" alt="">
-          </div>
-          <div class="text">
-            <h3>Deluxe Rooms</h3>
-            <p> <span>₹</span>4000 <span>/per night</span> </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img">
-            <img src="image/r3.jpeg" alt="">
-          </div>
-          <div class="text">
-            <h3>Superior Delux Rooms</h3>
-            <p> <span>₹</span>5000 <span>/per night</span> </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="wrapper wrapper2 top">
-    <div class="container">
-      <div class="text">
-        <div class="heading">
-          <h5>AT THE HEART OF COMMUNICATION</h5>
-          <h2>People Say</h2>
-        </div>
+   </section>
 
-        <div class="para">
-          <p>Excellent property and only 10 mins away from Lal Chowk. Front desk staff is extremely efficient, pleasant
-            and helpful. Property is clean and has a fantastic old time charm.</p>
+   <!-- end -->
 
-          <div class="box flex">
-            <div class="img">
-              <img src="image/person.png" alt="">
+   <!-- gallery -->
+
+   <section class="gallery" id="gallery">
+
+      <h1 class="heading">our gallery</h1>
+
+      <div class="swiper gallery-slider">
+
+         <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+               <img src="images/gallery1.jpg" alt="">
+               <div class="icon">
+                  <i class="fas fa-magnifying-glass-plus"></i>
+               </div>
             </div>
-            <div class="name">
-              <h5>Inderjeet</h5>
-              <h5>Jaipur</h5>
+
+            <div class="swiper-slide slide">
+               <img src="images/gallery2.jpg" alt="">
+               <div class="icon">
+                  <i class="fas fa-magnifying-glass-plus"></i>
+               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
+            <div class="swiper-slide slide">
+               <img src="images/gallery3.jpg" alt="">
+               <div class="icon">
+                  <i class="fas fa-magnifying-glass-plus"></i>
+               </div>
+            </div>
 
+            <div class="swiper-slide slide">
+               <img src="images/gallery4.jpg" alt="">
+               <div class="icon">
+                  <i class="fas fa-magnifying-glass-plus"></i>
+               </div>
+            </div>
 
+            <div class="swiper-slide slide">
+               <img src="images/gallery5.jpg" alt="">
+               <div class="icon">
+                  <i class="fas fa-magnifying-glass-plus"></i>
+               </div>
+            </div>
 
+            <div class="swiper-slide slide">
+               <img src="images/gallery6.jpg" alt="">
+               <div class="icon">
+                  <i class="fas fa-magnifying-glass-plus"></i>
+               </div>
+            </div>
 
-  <section class="gallary mtop " id="gallery">
-    <div class="container">
-      <div class="heading_top flex1">
-        <div class="heading">
-          <h5>PHOTO GALLERY</h5>
-          <h2>Photo Gallery of Our Hotel</h2>
-        </div>
-      </div>
+         </div>
 
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <img src="image/g1.jpeg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g2.jpeg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g3.jpeg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g4.jpeg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g5.jpeg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g6.jpeg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g7.jpg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g8.jpeg" alt="">
-        </div>
       </div>
 
-    </div>
-  </section>
+   </section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
-    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      dots: false,
-      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
-      responsive: {
-        0: {
-          items: 1
-        },
-        768: {
-          items: 2
-        },
-        1000: {
-          items: 4
-        }
-      }
-    })
-  </script>
+   <!-- end -->
 
+   <!-- review -->
 
+   <section class="review" id="review">
 
-  <section class="map top">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2208.3991427855917!2d74.81278711470345!3d34.08025229122173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18fcb0fc93bb7%3A0x267fe4dc589af1b7!2sHotel%20Kashmir%20Royale%20Resort!5e0!3m2!1sen!2sin!4v1657279637351!5m2!1sen!2sin"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
+      <div class="swiper review-slider">
+         <div class="swiper-wrapper">
 
+            <div class="swiper-slide slide">
+               <h2 class="heading">client's review</h2>
+               <i class="fas fa-quote-right"></i>
+               <p>Excellent property and only 10 mins away from Lal Chowk. Front desk staff is extremely efficient,
+                  pleasant and helpful. Property is clean and has a fantastic old time charm.</p>
+               <div class="user">
+                  <img src="images/pic-1.png" alt="">
+                  <div class="user-info">
+                     <h3>inderjeet</h3>
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                  </div>
+               </div>
+            </div>
 
-  <footer>
-    <div class="container footer-grid" id="footer">
-      <div class="box-footer">
-        <img src="./image/my-hotel-logo.png" width="100px" class="footer-logo" />
+            <div class="swiper-slide slide">
+               <h2 class="heading">client's review</h2>
+               <i class="fas fa-quote-right"></i>
+               <p>For vacations out of the few Hotels I tried, HOTEL KASHMIR ROYAL RESORT stands out for me with all the
+                  best facilities available and friendly staff present 24*7.</p>
+               <div class="user">
+                  <img src="images/pic-2.png" alt="">
+                  <div class="user-info">
+                     <h3>mamoon</h3>
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                  </div>
+               </div>
+            </div>
 
+            <div class="swiper-slide slide">
+               <h2 class="heading">client's review</h2>
+               <i class="fas fa-quote-right"></i>
+               <p>Excellent.</p>
+               <div class="user">
+                  <img src="images/pic-3.png" alt="">
+                  <div class="user-info">
+                     <h3>pramod shedekar</h3>
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                  </div>
+               </div>
+            </div>
 
-        <p>Accepted payment methods</p>
-        <img src="./image/upi-payments.jpg" alt="" srcset="" width="300px" class="payments">
+            <div class="swiper-slide slide">
+               <h2 class="heading">client's review</h2>
+               <i class="fas fa-quote-right"></i>
+               <p>The hospitality makes you feel at home. With a friendly staff and nice location, this place offers
+                  everything you need for a pleasant and comfortable stay.</p>
+               <div class="user">
+                  <img src="images/pic-4.png" alt="">
+                  <div class="user-info">
+                     <h3>Sayed</h3>
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="swiper-slide slide">
+               <h2 class="heading">client's review</h2>
+               <i class="fas fa-quote-right"></i>
+               <p>Rooms: 5
+                  Service: 5
+                  Location: 5</p>
+               <div class="user">
+                  <img src="images/pic-5.png" alt="">
+                  <div class="user-info">
+                     <h3>Sailesh Sharma</h3>
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="swiper-slide slide">
+               <h2 class="heading">client's review</h2>
+               <i class="fas fa-quote-right"></i>
+               <p>This hotel is fabulous. From the rooms to the service to the breakfast to the location.</p>
+               <div class="user">
+                  <img src="images/pic-6.png" alt="">
+                  <div class="user-info">
+                     <h3>cara terlep</h3>
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+         <div class="swiper-pagination"></div>
       </div>
 
-      <div class="contact">
-        <h3>Contact Us</h3>
-        <ul>
-          <li>Naqashpora Barbarshah
-            Srinagar, Jammu & Kashmir India, 190001</li>
-          <li><i class="far fa-envelope"></i> reservationkr123@gmail.com </li>
-          <li><i class="fa-solid fa-phone"></i> +91-9906409906 </li>
-          <li><i class="fa-solid fa-phone"></i> 0194-3585639 </li>
-          <li><i class="fa-solid fa-bell-concierge"></i> 24/ 7 Customer Services </li>
-        </ul>
+   </section>
+
+   <!-- end -->
+
+   <!-- faq -->
+
+   <section class="faqs" id="faq">
+
+      <h1 class="heading">frequently asked questions</h1>
+
+      <div class="row">
+
+         <div class="image">
+            <img src="images/FAQs.gif" alt="">
+         </div>
+
+         <div class="content">
+
+            <div class="box active">
+               <h3>What time is check-in and check-out at the hotel?</h3>
+               <p>Check-in time is open throught the day. Check-out time is 12 pm</p>
+            </div>
+
+            <div class="box">
+               <h3>Is Wi-Fi available in the hotel? If so, is it free?</h3>
+               <p>Yes, you'll have an access to high speed internet. It is free.</p>
+            </div>
+
+            <div class="box">
+               <h3>What amenities are included in my hotel room?</h3>
+               <p>All basic amenities are available such as a bed, hot and cold water, a bathroom with toiletries, a TV,
+                  a dining room, and a phone.</p>
+            </div>
+
+            <div class="box">
+               <h3>Can I cancel my hotel reservation if my plans change?</h3>
+               <p>Our hotel allows you to cancel your reservation for free up to a certain time before your scheduled
+                  arrival date.</p>
+            </div>
+
+            <div class="box">
+               <h3>what payment methods are accepted?</h3>
+               <p>We accept payment methods such as UPI, Internet Banking, Mobile Banking </p>
+            </div>
+
+         </div>
+
       </div>
-    </div>
-  </footer>
+
+   </section>
+
+   <!-- end -->
+
+   <!-- reservation -->
+
+   <section class="reservation" id="reservation">
+
+      <h1 class="heading">book now</h1>
+
+      <form action="https://formsubmit.co/reservationkr123@gmail.com" method="POST">
+
+         <div class="container">
+
+            <div class="box">
+               <p>name <span>*</span></p>
+               <input type="text" class="input" placeholder="Your Name">
+            </div>
+
+            <div class="box">
+               <p>email <span>*</span></p>
+               <input type="text" class="input" placeholder="Your Email">
+            </div>
+
+            <div class="box">
+               <p>check in <span>*</span></p>
+               <input type="date" class="input">
+            </div>
+
+            <div class="box">
+               <p>check out <span>*</span></p>
+               <input type="date" class="input">
+            </div>
+
+            <div class="box">
+               <p>adults <span>*</span></p>
+               <select name="adults" class="input">
+                  <option value="1">1 adults</option>
+                  <option value="2">2 adults</option>
+                  <option value="3">3 adults</option>
+                  <option value="4">4 adults</option>
+                  <option value="5">5 adults</option>
+                  <option value="6">6 adults</option>
+               </select>
+            </div>
+
+            <div class="box">
+               <p>children <span>*</span></p>
+               <select name="child" class="input">
+                  <option value="1">1 child</option>
+                  <option value="2">2 child</option>
+                  <option value="3">3 child</option>
+                  <option value="4">4 child</option>
+                  <option value="5">5 child</option>
+                  <option value="6">6 child</option>
+               </select>
+            </div>
+
+            <div class="box">
+               <p>rooms <span>*</span></p>
+               <select name="rooms" class="input">
+                  <option value="1">1 rooms</option>
+                  <option value="2">2 rooms</option>
+                  <option value="3">3 rooms</option>
+                  <option value="4">4 rooms</option>
+                  <option value="5">5 rooms</option>
+                  <option value="6">6 rooms</option>
+               </select>
+            </div>
+
+            <div class="box">
+               <p>room type <span>*</span></p>
+               <select name="type" class="input">
+                  <option value="1">exclusive rooms</option>
+                  <option value="2">family rooms</option>
+                  <option value="3">daily rooms</option>
+                  <option value="4">panoramic rooms</option>
+               </select>
+            </div>
+
+         </div>
+
+         <input type="submit" value="check availability" class="btn">
+
+      </form>
+
+   </section>
+
+   <!-- end -->
+
+   <!-- map location -->
+   <section class="map top">
+      <iframe
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2208.3991427855917!2d74.81278711470345!3d34.08025229122173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18fcb0fc93bb7%3A0x267fe4dc589af1b7!2sHotel%20Kashmir%20Royale%20Resort!5e0!3m2!1sen!2sin!4v1657279637351!5m2!1sen!2sin"
+         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+         referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </section>
+   <!-- end -->
+
+   <!-- footer -->
+
+   <section class="footer">
+
+      <div class="box-container">
+
+         <div class="box footer contact-info">
+            <h3>contact info</h3>
+            <i class="fas fa-phone">
+               <a href="tel:+919906409906">+919906409906 </a>
+            </i>
+            <i class="fas fa-envelope">
+               <a href="mailto:reservationkr123@gmail.com">reservationkr123@gmail.com</a>
+            </i>
+            <i class="fa-sharp fa-solid fa-location-dot">
+               <a href="#" style="cursor:text">Barbarshah, Srinagar, J&K, India</a>
+            </i>
+         </div>
+
+      </div>
+
+      <div class="credit">&copy; made with ❤️ by <a href="https://abdulmanan.dev/" target="_blank">Abdul Manan</a>
+      </div>
+
+   </section>
+
+   <!-- end -->
+
+
+
+
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+   <script src="script.js"></script>
 
 </body>
 
